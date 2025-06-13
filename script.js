@@ -94,7 +94,8 @@ function checarWhileEX2() {
         conta++
     }
 
-    "Sequência de Fibonacci até " + num + ": " + resultado
+    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + ": " + resultado
+
 }
 
 
@@ -118,7 +119,8 @@ function checarDoEX2() {
         conta++
     } while (conta <= num)
 
-    "Sequência de Fibonacci até " + num + ": " + resultado
+    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + ": " + resultado
+
 }
 
 
@@ -140,5 +142,5 @@ function checarForEX2() {
         ultimo = numero
     }
 
-    "Sequência de Fibonacci até " + num + ": " + resultado
+    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + ": " + resultado
 }
