@@ -1,82 +1,82 @@
-// EX01
-
+//EX01
 function checarWhileEX1() {
-    let num1 = parseInt(document.getElementById('num1Ex1').value)
-    let num2 = parseInt(document.getElementById('num2Ex1').value)
-    i = num1 + 1
-    contagemDePares = 0
-    contagemDeImpares = 0
+    let numero = parseInt(document.getElementById('numEx1').value)
+    let somaPares = 0
+    let somaImpares = 0
 
+    if (numero > 0) {
+        let contador = 0
+        let numeroPar = 2
+        let numeroImpar = 1
 
-    if (num1 < num2) {
-        while (i < num2) {
-            if (i % 2 == 0) {
-                contagemDePares++
-            } else {
-                contagemDeImpares++
-            }
-            i++
+        while (contador < numero) {
+            somaPares += numeroPar
+            somaImpares += numeroImpar
+
+            numeroPar += 2
+            numeroImpar += 2
+            contador++
         }
-        document.getElementById("respostaEX1").innerHTML = 'Os numeros pares são:' + contagemDePares + '<br>' + 'Os numeros ímpares são' + contagemDeImpares
-    }
-    else {
-        document.getElementById("respostaEX1").innerHTML = 'O primeiro numero deve ser menor que o segundo'
+
+        document.getElementById("respostaEX1").innerHTML = 'Soma dos pares: ' + somaPares + '<br>' + 'Soma dos ímpares: ' + somaImpares
+    } else {
+        document.getElementById("respostaEX1").innerHTML = 'Insira um número positivo'
     }
 }
-
 
 function checarDoEX1() {
-    let num1 = parseInt(document.getElementById('num1Ex1').value)
-    let num2 = parseInt(document.getElementById('num2Ex1').value)
-    i = num1 + 1
-    contagemDePares = 0
-    contagemDeImpares = 0
+    let numero = parseInt(document.getElementById('numEx1').value)
+    let somaPares = 0
+    let somaImpares = 0
 
-    if (num1 < num2) {
+    if (numero > 0) {
+        let contador = 0
+        let numeroPar = 2
+        let numeroImpar = 1
+
         do {
-            if (i % 2 == 0) {
-                contagemDePares++
-            } else {
-                contagemDeImpares++
-            }
-            i++
-        } while (i < num2)
-        document.getElementById("respostaEX1").innerHTML = 'Os numeros pares são:' + contagemDePares + '<br>' + 'Os numeros ímpares são' + contagemDeImpares
+            somaPares += numeroPar
+            somaImpares += numeroImpar
+
+            numeroPar += 2
+            numeroImpar += 2
+            contador++
+        } while (contador < numero)
+
+        document.getElementById("respostaEX1").innerHTML = 'Soma dos pares: ' + somaPares + '<br>' + 'Soma dos ímpares: ' + somaImpares
     } else {
-        document.getElementById("respostaEX1").innerHTML = 'O primeiro numero deve ser menor que o segundo'
+        document.getElementById("respostaEX1").innerHTML = 'Insira um número  positivo'
     }
 }
-
 
 function checarForEX1() {
-    let num1 = parseInt(document.getElementById('num1Ex1').value)
-    let num2 = parseInt(document.getElementById('num2Ex1').value)
-    contagemDePares = 0
-    contagemDeImpares = 0
+    let numero = parseInt(document.getElementById('numEx1').value)
+    let somaPares = 0
+    let somaImpares = 0
 
-    if (num1 < num2) {
-        for (i = num1 + 1; i < num2; i++) {
-            if (i % 2 == 0) {
-                contagemDePares++
-            } else {
-                contagemDeImpares++
-            }
+    if (numero > 0) {
+        let numeroPar = 2
+        let numeroImpar = 1
+
+        for (let contador = 0; contador < numero; contador++) {
+            somaPares += numeroPar
+            somaImpares += numeroImpar
+
+            numeroPar += 2
+            numeroImpar += 2
         }
-        document.getElementById("respostaEX1").innerHTML = 'Os numeros pares são:' + contagemDePares + '<br>' + 'Os numeros ímpares são' + contagemDeImpares
+
+        document.getElementById("respostaEX1").innerHTML = 'Soma dos pares: ' + somaPares + '<br>' + 'Soma dos ímpares: ' + somaImpares
     } else {
-        document.getElementById("respostaEX1").innerHTML = 'O primeiro numero deve ser menor que o segundo'
+        document.getElementById("respostaEX1").innerHTML = 'Insira um número positivo'
     }
 }
-
-
-
 
 
 //EX02
 
 function checarWhileEX2() {
     let num = parseInt(document.getElementById('numEx2').value)
-    let resposta = document.getElementById('resposta')
     let penultimo = 0
     let ultimo = 1
     let resultado = "0"
@@ -87,21 +87,18 @@ function checarWhileEX2() {
 
     let conta = 3
     while (conta <= num) {
-        let numero = ultimo + penultimo
+        numero = ultimo + penultimo
         resultado += ", " + numero
         penultimo = ultimo
         ultimo = numero
         conta++
     }
 
-    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + ": " + resultado
-
+    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + " : " + resultado
 }
-
 
 function checarDoEX2() {
     let num = parseInt(document.getElementById('numEx2').value)
-    let resposta = document.getElementById('resposta')
     let penultimo = 0
     let ultimo = 1
     let resultado = "0"
@@ -112,21 +109,18 @@ function checarDoEX2() {
 
     let conta = 3
     do {
-        let numero = ultimo + penultimo
+        numero = ultimo + penultimo
         resultado += ", " + numero
         penultimo = ultimo
         ultimo = numero
         conta++
     } while (conta <= num)
 
-    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + ": " + resultado
-
+    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + " : " + resultado
 }
-
 
 function checarForEX2() {
     let num = parseInt(document.getElementById('numEx2').value)
-    let resposta = document.getElementById('resposta')
     let penultimo = 0
     let ultimo = 1
     let resultado = "0"
@@ -135,12 +129,12 @@ function checarForEX2() {
         resultado += ", 1"
     }
 
-    for (let i = 3; i <= num; i++) {
-        let numero = ultimo + penultimo
+    for (i = 3; i <= num; i++) {
+        numero = ultimo + penultimo
         resultado += ", " + numero
         penultimo = ultimo
         ultimo = numero
     }
 
-    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + ": " + resultado
+    document.getElementById("resultadoEx2").innerHTML = "Sequência de Fibonacci até " + num + " : " + resultado
 }
