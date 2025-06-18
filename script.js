@@ -5,9 +5,9 @@ function checarWhileEX1() {
     let somaImpares = 0
 
     if (numero > 0) {
-        let contador = 0
-        let numeroPar = 2
-        let numeroImpar = 1
+        contador = 0
+        numeroPar = 2
+        numeroImpar = 1
 
         while (contador < numero) {
             somaPares += numeroPar
@@ -30,9 +30,9 @@ function checarDoEX1() {
     let somaImpares = 0
 
     if (numero > 0) {
-        let contador = 0
-        let numeroPar = 2
-        let numeroImpar = 1
+        contador = 0
+        numeroPar = 2
+        numeroImpar = 1
 
         do {
             somaPares += numeroPar
@@ -55,10 +55,10 @@ function checarForEX1() {
     let somaImpares = 0
 
     if (numero > 0) {
-        let numeroPar = 2
-        let numeroImpar = 1
+        numeroPar = 2
+        numeroImpar = 1
 
-        for (let contador = 0; contador < numero; contador++) {
+        for (contador = 0; contador < numero; contador++) {
             somaPares += numeroPar
             somaImpares += numeroImpar
 
